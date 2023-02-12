@@ -7,7 +7,7 @@ export const Socials = () => (
         {
           SOCIAL_MEDIA_HANDLES.map((social, index) => (
             <li key={index} title={social.title}>
-                <a href={social.link} target="_blank">
+                <a href={social.link} rel="noreferrer" target="_blank">
                     <Image src={social.src} width={30} height={30}/>
                 </a>
             </li>

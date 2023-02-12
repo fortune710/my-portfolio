@@ -40,13 +40,13 @@ export const ArticlesSection = () => {
         }
     }
 
-    const memoizedFetch = useCallback(() => fetchData(), [])
+    const memoizedFetch = useCallback(() => fetchData(), [fetchData])
 
     const [articles, setArticles] = useState(undefined)
 
     useEffect(() => {
         memoizedFetch()
-    }, [])
+    }, [memoizedFetch])
 
     return(
         <section id="articles" className={styles.section}>
