@@ -8,17 +8,15 @@ import styles from '../styles/Home.module.scss';
 import { IoChevronDown } from 'react-icons/io5';
 import { useScroll, motion } from 'framer-motion';
 import { SOCIAL_MEDIA_HANDLES } from '../components/Socials/socials-data';
+import Link from 'next/link';
 
 export default function Home() {
   const pageRef = useRef(null);
+  /*
   const { scrollYProgress } = useScroll({
     target: pageRef,
     offset: ["start end", "end end"]
-  })
-
-  useEffect(() => {
-    console.log(scrollYProgress)
-  }, [scrollYProgress])
+  })*/
 
   return (
     <React.Fragment>
@@ -40,11 +38,11 @@ export default function Home() {
 
           <section>
             <h4>Hello</h4>
-            <h1>I'm Fortune Alebiosu</h1>
+            <h1>I&apos;m Fortune Alebiosu</h1>
 
             <p>
               I am a software developer and I am passionate 
-              about  about designing and implementing beautiful user interfaces, 
+              about designing and implementing beautiful user interfaces, 
               and building high quality, high performance applications that users will adore.
             </p>
 
@@ -68,7 +66,7 @@ export default function Home() {
           <div className={styles.aboutMeContainer}>
             <p>
               My name is Fortune Alebiosu, and I love building user interfaces
-              that users will adore. I'm currently a final year student in the Computer Science department 
+              that users will adore. I&apos;m currently a final year student in the Computer Science department 
               at Nile University of Nigeria. 
 
               My dev journey started back in 2020, when I had a huge interest for Mobile App Development, 
@@ -76,12 +74,12 @@ export default function Home() {
               This opened my eyes to the power of web technologies and helping me to fully utilize the
               power of the web. 
 
-              Moving on to today, I've gained lots of skills and had the priviglege of building an awesome startup called <a>Interna</a> with 
+              Moving on to today, I&apos;ve gained lots of skills and had the priviglege of building an awesome startup called <a>Interna</a> with 
               some of my school colleagues.
             </p>
 
             <div className={styles.skills}>
-              <h5>Here are some the skills I've gained</h5>
+              <h5>Here are some the skills I&apos;ve gained</h5>
               <ul role={'list'}>
                 <li>JavaScript</li>
                 <li>React</li>
@@ -98,7 +96,7 @@ export default function Home() {
           </div>
 
           <div className={styles.imageHolder}>
-            <img src="/fortune.jpeg" />
+            <Image width={300} height={500} src="/fortune.jpeg" alt="A picture of me" />
           </div>
         </article>
 
@@ -108,13 +106,13 @@ export default function Home() {
           <div>
             <h3>
               I am <span>obsessed</span> with performace, and a true believer that performace 
-              and aesthetics can go hand in hand. That's why I love exploring new 
+              and aesthetics can go hand in hand. That&apos;s why I love exploring new 
               <span> technologies</span> and <span> techniques</span> that can help me bring my designs 
               to life in <span>most efficient</span> way possible.
             </h3>
 
             <h3>
-              Whether I'm working on a <span>complex</span> web application
+              Whether I&apos;m working on a <span>complex</span> web application
               or a <span>simple</span> landing page, I approach each project with 
               the same level of <span>detail</span> and dedication. My goal is always to
               <span> deliver results</span> and that not only meet,
@@ -124,7 +122,7 @@ export default function Home() {
           </div>
 
           <div className={styles.ImageHolder}>
-            <Image src="/image-1.webp" width={300} height={400}/>
+            <Image alt="someone coding" src="/image-1.webp" width={300} height={400}/>
           </div>
         </section>
         <ArticlesSection/>
@@ -167,9 +165,9 @@ export default function Home() {
               <a>
                 MY RESUME
               </a>
-              <a href="/projects">
+              <Link href="/projects">
                 MY PROJECTS
-              </a>
+              </Link>
             </div>
           </div>
           <ContactInformation/>
@@ -179,8 +177,8 @@ export default function Home() {
           <div>
             {
               SOCIAL_MEDIA_HANDLES.map(({ src, link, title }) => (
-                <a target="_blank" rel="noreferrer" href={link}>
-                  <Image width={30} height={30} src={src}/>
+                <a key={title} target="_blank" rel="noreferrer" href={link}>
+                  <Image width={30} height={30} src={src} alt={title} />
                 </a>
               ))
             }

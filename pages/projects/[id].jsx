@@ -14,7 +14,7 @@ const ProjectDetailPage = () => {
     useEffect(() => {
         const [project] = Projects.filter((project) => project.id === id) 
         setProject(project);
-    }, [])
+    }, [id])
     
     if(!project) return <h1>Loading...</h1>
 
@@ -29,6 +29,7 @@ const ProjectDetailPage = () => {
                     src={project?.imageUrl}
                     width={350}
                     height={500}
+                    alt={project?.title}
                 />
             </div>
             <div className={styles.projectInfo}>
@@ -39,7 +40,7 @@ const ProjectDetailPage = () => {
                 <ul>
                 {
                     project?.tools?.map((tool) => (
-                        <li>{tool}</li>
+                        <li key={tool}>{tool}</li>
                     ))
                 }
                 </ul>
@@ -49,6 +50,7 @@ const ProjectDetailPage = () => {
                         target="_blank" 
                         tabIndex="0" 
                         href={project?.githubLink}
+                        rel="noreferrer"
                     >
                         <IoLogoGithub/>
                         Check it out on Github
@@ -58,6 +60,7 @@ const ProjectDetailPage = () => {
                         target="_blank" 
                         tabIndex="0" 
                         href={project?.link}
+                        rel="noreferrer"
                     >
                         <IoLinkOutline/>
                         View the Project
