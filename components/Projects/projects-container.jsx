@@ -15,10 +15,10 @@ export const ProjectsContainer = ({ limit }) => {
                 {
                     !limit ?
                     Projects.map(project => (
-                        <Project {...project}/>
+                        <Project key={project.id} {...project}/>
                     ))  
                     : Projects.slice(0, limit).map(project => (
-                        <Project {...project}/>
+                        <Project key={project.id} {...project}/>
                     ))          
                 }
                 </div>

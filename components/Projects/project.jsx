@@ -42,7 +42,7 @@ export const Project = ({ link, githubLink, title, description, tags, id }) => {
             <div className={styles.projectTech}>
             {
                 tags?.map(tag => (
-                    <span className={styles.projectTag} style={{ background: tag.color }}>
+                    <span key={tag.name} className={styles.projectTag} style={{ background: tag.color }}>
                         {tag.name}
                     </span>
                 ))

@@ -40,20 +40,21 @@ export const ArticlesSection = () => {
         }
     }
 
-    const memoizedFetch = useCallback(() => fetchData(), [fetchData])
+    //const memoizedFetch = useCallback(() => , [])
 
     const [articles, setArticles] = useState(undefined)
 
     useEffect(() => {
-        memoizedFetch()
-    }, [memoizedFetch])
+        fetchData()    
+    })
 
     return(
         <section id="articles" className={styles.section}>
             <SectionTitle name="I write sometimes"/>
             <p>
                 I talk about web dev a lot and my content is geared 
-                towards beginner developers.
+                towards beginner developers. Here are some of my recent 
+                articles.
             </p>
 
             <div className={styles.articleContainer}>
