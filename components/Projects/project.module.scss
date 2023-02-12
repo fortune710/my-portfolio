@@ -1,0 +1,80 @@
+.projectCard {
+    border-radius: 7px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 8px;
+    cursor: pointer;
+    background-color: lighten($color: #202126, $amount: 10);
+}
+
+.projectIcons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+.projectInfo {
+    font-family: 'Work Sans', Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 10px 0;
+    font-size: 14px;
+    color: #fbfbfb;
+}
+
+.projectInfo :is(h3, p){
+    margin: 5px 0;
+}
+
+.projectTag {
+    padding: 3px 7px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: 'Fragment Mono', monospace;
+    font-size: 12px;
+}
+
+.projectTech {
+    display: flex;
+    gap: 0.5em;
+    margin: 5px 0;
+}
+
+
+.projects {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 20px auto;
+}
+
+.seeAll {
+    background-color: var(--green);
+    color: #fff;
+    margin: 0 auto;
+    height: 50px;
+    padding: 0 50px;
+    border: 0;
+    border-radius: 5px;
+}
+
+
+
+@media screen and (max-width: 450px){
+    .projects {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
