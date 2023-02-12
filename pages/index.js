@@ -96,7 +96,7 @@ export default function Home() {
           </div>
 
           <div className={styles.imageHolder}>
-            <Image width={300} height={500} src="/fortune.jpeg" alt="A picture of me" />
+            <img src="/fortune.jpeg" alt="A picture of me" />
           </div>
         </article>
 
