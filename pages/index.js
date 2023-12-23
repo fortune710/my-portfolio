@@ -26,45 +26,57 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <motion.header 
-        //style={{ opacity: 1 - scrollY }}
-        ref={pageRef} 
+      <header 
         className={styles.intro}
       >
         <Navbar />
 
-        <div className={styles.profile}>
-          <Socials />
-
-          <section>
+        <section className="flex items-center w-full justify-between px-2 md:px-4 lg:px-8">
+          <div className='flex flex-col gap-2 md:gap-3'>
             <h4>Hello</h4>
-            <h1>I&apos;m Fortune Alebiosu</h1>
+            <h1 className='text-2xl md:text-3xl lg:text-4xl'>
+              I&apos;m Fortune Alebiosu
+            </h1>
 
-            <p>
+            <p className='text-xl md:text-2xl lg:text-3xl'>
               I am a software developer and I am passionate 
               about designing and implementing beautiful user interfaces, 
               and building high quality, high performance applications that users will adore.
             </p>
 
+            <button className='border border-white rounded-md md:w-1/2 lg:w-1/4 py-3 my-3'>
+              My Resume
+            </button>
+          </div>
 
-          </section>
-        </div>
+          <Socials />
+        </section>
 
         <a href="#main" className={styles.scrollDownPointer}>
           <IoChevronDown/>
           <h3>SCROLL DOWN</h3>
         </a>
 
-      </motion.header>
+      </header>
 
       <main id="main" className={styles.main}>
         
         <SectionTitle name="About Me"/>
         
-        <article className={styles.aboutMe}>
+        <article className='px-2 md:px-4 lg:px-6 grid grid-cols-1 md:grid-cols-[_1fr_2fr]'>
 
-          <div className={styles.aboutMeContainer}>
-            <p>
+          <div className='w-full'>
+            <Image 
+              src="/fortune.jpeg" 
+              alt="A picture of me" 
+              width={310}
+              height={290}
+              className='mx-auto w-full'
+            />
+          </div>
+
+          <div className='w-full flex flex-col gap-2 md:gap-3'>
+            <p className='text-lg lg:text-lg text-white/70'>
               My name is Fortune Alebiosu, and I love building user interfaces
               that users will adore. I&apos;m currently a final year student in the Computer Science department 
               at Nile University of Nigeria. 
@@ -72,31 +84,43 @@ export default function Home() {
               My dev journey started back in 2020, when I had a huge interest for Mobile App Development, 
               making me look for shortest route possible to being a Mobile App Developer😅. 
               This opened my eyes to the power of web technologies and helping me to fully utilize the
-              power of the web. 
-
-              Moving on to today, I&apos;ve gained lots of skills and had the priviglege of building an awesome startup called <a>Interna</a> with 
-              some of my school colleagues.
+              power of the web.               
             </p>
 
-            <div className={styles.skills}>
-              <h5>Here are some the skills I&apos;ve gained</h5>
-              <ul role={'list'}>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>TypeScript</li>
-                <li>Next.js</li>
-                <li>Node.js</li>
-                <li>Capacitor.js</li>
-                <li>Ionic Framework</li>
-                <li>Firebase</li>
-                <li>MySQL</li>
-                <li>Git</li>
-              </ul>
-            </div>
-          </div>
+            <p className='text-lg text-white/70'>
+              Moving on to today, I&apos;ve gained lots of skills and had the priviglege of building an awesome startup called 
+              <a className='font-semibold text-white'> Interna</a> and <a className='font-semibold text-white'>ConsumerWatch</a> with 
+              some of my school colleagues.
+              In my free time, I create programming content that is geared towards beginner developers, by writing articles on my <a className='font-semibold text-white'>blog</a> and 
+              recoding videos on <a className='font-semibold text-white'>TikTok</a>
+            </p>
 
-          <div className={styles.imageHolder}>
-            <img src="/fortune.jpeg" alt="A picture of me" />
+            <p className='text-lg text-white/70'>
+              When I&apos;m not working, I&apos;m usually out playing football, watching anime or laughing through YouTube shorts.
+            </p>
+
+
+            {
+              /*
+              
+              <div className={styles.skills}>
+                <h5>Here are some the skills I&apos;ve gained</h5>
+                <ul role={'list'}>
+                  <li>JavaScript</li>
+                  <li>React</li>
+                  <li>TypeScript</li>
+                  <li>Next.js</li>
+                  <li>Node.js</li>
+                  <li>Capacitor.js</li>
+                  <li>Ionic Framework</li>
+                  <li>Firebase</li>
+                  <li>MySQL</li>
+                  <li>Git</li>
+                </ul>
+              </div>
+              
+              */
+            }
           </div>
         </article>
 
