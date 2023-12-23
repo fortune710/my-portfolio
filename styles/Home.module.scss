@@ -41,10 +41,9 @@
 
 .intro{
   z-index: 50;
-  height: 100vh;
-  background-image: linear-gradient(to bottom, transparent 50%, var(--dark) 75%), url('../public/night-sky.webp');
+  height: 130vh;
+  //background-image: linear-gradient(to bottom, transparent 70%, var(--dark) 100%), url('../public/night-sky.webp');
 
-  //background-image: url('../public/night-sky.webp');
   //-webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1), transparent 91%);
   //mask-image: linear-gradient(rgba(0, 0, 0, 1), transparent);
   background-position: center;
@@ -58,7 +57,6 @@
   h1 {
     font-weight: 600;
     font-size: var(--large-text);
-    font-family: 'Work Sans', sans-serif;
     color: #fff;
     margin: 10px 0;
   }
@@ -70,8 +68,7 @@
   p {
     color: #fbfbfb;
     width: 65%;
-    line-height: 1.625em;
-    font-size: var(--medium-text);
+    line-height: 42px !important;
     filter: brightness(1.5);
   }
 }
@@ -115,9 +112,6 @@
   line-height: 1.625em;
   color: #fbfbfb;
   
-  p{
-    font-family: 'Work Sans', sans-serif;
-  }
 
   ul {
     display: grid;
