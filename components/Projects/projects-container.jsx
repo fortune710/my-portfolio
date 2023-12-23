@@ -11,7 +11,7 @@ export const ProjectsContainer = ({ limit }) => {
         <>
             <SectionTitle name="My Work"/>
             <section>
-                <div className={styles.projects}>
+                <div className="grid gap-2 md:gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-3 md:px-4 my-2 md:my-3">
                 {
                     !limit ?
                     Projects.map(project => (

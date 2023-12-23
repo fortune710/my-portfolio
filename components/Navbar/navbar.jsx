@@ -10,7 +10,6 @@ export const Navbar = () => {
                     <li>About Me</li>
                     <li>My Projects</li>
                     <li>Experience</li>
-                    <li>View my Resume</li>
                 </ul>
             </div>
         </nav>
