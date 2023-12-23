@@ -1,13 +1,14 @@
-.projectCard {
-    border-radius: 7px;
-    width: 90%;
-    margin: 0 auto;
-    padding: 8px;
-    cursor: pointer;
-    background-color: lighten($color: #202126, $amount: 10);
+
+
+.glass {
+    @apply backdrop-blur-sm bg-white/20 w-full shadow-sm;
 }
 
-.projectIcons {
+.project-title {
+    @apply group-hover:text-primary;
+}
+
+.project-icons {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,29 +21,22 @@
     }
 }
 
-.projectInfo {
-    font-family: 'Work Sans', Verdana, Geneva, Tahoma, sans-serif;
+.project-info {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-evenly;
+    gap: 10px;
     margin: 10px 0;
     font-size: 14px;
     color: #fbfbfb;
 }
 
-.projectInfo :is(h3, p){
+.project-info :is(h3, p){
     margin: 5px 0;
 }
 
-.projectTag {
-    padding: 3px 7px;
-    border-radius: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-family: 'Fragment Mono', monospace;
-    font-size: 12px;
+.project-tag {
+    @apply px-1 py-2 rounded-lg;
 }
 
 .projectTech {
