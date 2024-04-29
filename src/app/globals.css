@@ -11,6 +11,16 @@
   overflow-x: hidden;
 }
 
+html {
+  background: #030303;
+}
+
+.glass-back {
+  background: radial-gradient(107.32% 141.42% at 0% 0%, );
+  box-shadow: -5px -5px 250px 0px rgba(255, 255, 255, 0.02) inset;
+  backdrop-filter: blur(21px);
+}
+
 .custom-shadow {
   transition: all 0.3s;
   box-shadow: 4px 4px 0 0 rgb(189, 189, 189);
