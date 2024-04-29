@@ -11,7 +11,9 @@ const config: Config = {
       },
 
       colors: {
-        "primary": "#33FF85"
+        "primary": "#33FF85",
+        "dark": "#121212",
+        "dark-muted": "#3B3B3B"
       },
       fontFamily: {
         "inter": "var(--inter)",
