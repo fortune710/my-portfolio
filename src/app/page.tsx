@@ -9,6 +9,7 @@ import { VisualEditing } from "next-sanity";
 import { draftMode } from "next/headers";
 */
 
+import SkillsContainer from "@/components/skills/container";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -21,7 +22,7 @@ export default async function Home() {
       <Image src="/glow-1.svg" className="absolute top-0 left-0" alt="Glow" width={300} height={300}/>
       <header className="w-full px-4 md:px-6 lg:px-12 xl:px-20 h-28 flex items-center">
         <div className="flex items-center justify-between text-white w-full">
-          <img width={50} src="/next.svg" alt="" />
+          <Image width={50} src="/fortune-logo.png" alt="Fortune Logo" height={70} className="z-10" />
 
           <nav className="flex items-center gap-10 font-inter font-semibold">
             <Link href="/blog">
@@ -55,6 +56,45 @@ export default async function Home() {
                 I&apos;m an amazing full-stack developer passionate about building scalable digital experiences. 
                 My aim is to blend functionality and aesthetics to create impactful solutions
               </p>
+            </div>
+          </div>
+        </section>
+
+
+        <section className="px-4 md:px-6 lg:px-12 xl:px-20 font-jarkata mt-3">
+          <h2 className="font-bold text-3xl md:text-4xl lg:text-5xl text-primary">About Me</h2>
+
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[_2fr_1fr] gap-4">
+            <div className="bg-dark border border-dark-muted rounded-[40px] px-8 py-7 mt-5">
+              <p className="text-xl md:text-3xl md:leading-relaxed">
+                I&apos;m recent graduate from the Computer Science department at Nile University of Nigeria. 
+                My dev journey started back in 2020, when I had a huge interest for Mobile App Development, 
+                making me look for shortest route possible to being a Mobile App Developer😅. This opened my 
+                eyes to the power of web technologies and helping me to fully utilize the power of the web. 
+                Moving on to today, I&apos;ve gained lots of skills and had the privilege of building an awesome 
+                startup called Interna with some of my school colleagues.
+              </p>
+            </div>
+
+            <div className="relative">
+              <div className="absolute z-0 top-0 right-0 bg-dark border border-dark-muted rounded-[40px] w-[90%] h-[400px]"/>
+              <Image 
+                src="/Image.svg" 
+                alt="Fortune Image"
+                className="z-20 absolute rounded-[40px] bottom-0 left-0 w-[90%] h-[75%]" 
+                width={300} 
+                height={400}
+              />
+            </div>
+          </div>
+        </section>
+
+        <section className="px-4 md:px-6 lg:px-12 xl:px-20 font-jarkata mt-3">
+          <div className="w-full bg-dark border border-dark-muted rounded-[40px] px-8 py-10">
+            <h2 className="text-4xl font-bold">My Skills</h2>
+
+            <div className="w-full mt-8">
+              <SkillsContainer/>
             </div>
           </div>
         </section>
