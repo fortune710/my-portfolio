@@ -2,7 +2,6 @@
 
 import { homePageQueryOptions } from "@/sanity/client/queryOptions";
 import { sanityLoader } from "@/sanity/client/sanityLoader";
-import { PageLayout } from "@/ui";
 import { CtaButton } from "@/ui/buttons";
 import Sections from "@/utils/Sections";
 import { VisualEditing } from "next-sanity";
@@ -10,12 +9,20 @@ import { draftMode } from "next/headers";
 */
 
 import SkillsContainer from "@/components/skills/container";
+import { firestore } from "@/utils/firebase";
+import { collection, getDocs } from "firebase/firestore";
 import Image from "next/image";
 import Link from "next/link";
+
+const projectCollections = collection(firestore, "projects")
 
 export default async function Home() {
   // Example How to use query with options
   //const homePage = await sanityLoader.loadHomePage(homePageQueryOptions);
+
+  const projects = (await getDocs(projectCollections)).docs.map((doc) => ({ ...doc.data() }));
+
+
 
   return (
     <>
@@ -96,6 +103,47 @@ export default async function Home() {
             <div className="w-full mt-8">
               <SkillsContainer/>
             </div>
+          </div>
+        </section>
+
+        <section className="px-4 md:px-6 lg:px-12 xl:px-20 font-jarkata mt-3">
+          <h2 className="text-4xl font-bold">My Works</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-5">
+              {
+                projects.map((project) => (
+                  <div className="w-full bg-dark border border-dark-muted rounded-[40px] px-8 py-10 space-y-3" key={project.name}>
+                    <div className="flex justify-between items-start">
+                      <Image
+                        src={project.logo}
+                        alt={project.name}
+                        width={200}
+                        height={200}
+                        className="rounded-lg"
+                      />
+
+                      <Link target="_blank"  className="border border-white rounded-md py-4 px-5 text-white font-medium" href={project.link}>
+                        Checkout Live App
+                      </Link>
+                    </div>
+
+                    <h2 className="font-bold text-2xl md:text-3xl lg:text-4xl">{project.title}</h2>
+                    <p>2024 - Web App</p>
+
+                    <p className="lg:text-lg text-[#B3B3B3]">{project.description}</p>
+
+                    <Image
+                      src={project.image}
+                      alt={project.name}
+                      width={500}
+                      height={500}
+                      className="rounded-lg w-full"
+                    />
+
+                  </div>
+                ))
+              }
+
+
           </div>
         </section>
       </main>
