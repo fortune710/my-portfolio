@@ -1,3 +1,4 @@
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../ui/tooltip"
 import SkillBlock from "./block"
 
 const skills = [
@@ -92,15 +93,23 @@ const skills = [
 export default function SkillsContainer() {
     return (
         <div  className="grid gap-12 grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7">
-            {
-                skills.map((skill) => (
-                    <SkillBlock
-                        key={skill.name}
-                        {...skill}
-                    />
+            <TooltipProvider>
+                {
+                    skills.map((skill) => (
+                        <Tooltip key={skill.name}>
+                            <TooltipTrigger asChild>
+                                <SkillBlock
+                                    {...skill}
+                                />
+                            </TooltipTrigger>
+                            <TooltipContent>
+                                <p>{skill.name}</p>
+                            </TooltipContent>
+                        </Tooltip>
 
-                ))
-            }
+                    ))
+                }
+            </TooltipProvider>
         </div>
     )
 }
