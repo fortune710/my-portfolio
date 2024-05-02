@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "@/components/ui/toaster";
 
 
 export const metadata: Metadata = {
@@ -31,7 +32,11 @@ export default function RootLayout({
       <head>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
       </head>
-      <body className={`${inter.className} ${plus.className}`}>{children}</body>
+      <body className={`${inter.className} ${plus.className}`}>
+        {children}
+
+        <Toaster/>
+      </body>
     </html>
   );
 }
