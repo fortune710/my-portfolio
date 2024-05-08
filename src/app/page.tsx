@@ -149,6 +149,21 @@ export default async function Home() {
           </div>
         </section>
 
+        <section className="px-4 md:px-6 lg:px-12 xl:px-20 mt-3">
+          <Container className="space-y-3 px-6 py-7">
+              <p className="text-lg">
+                I am obsessed with performace, and a true believer that performace and aesthetics can go hand in hand. That's why I 
+                love exploring new technologies and techniques that can help me bring my designs to life in most efficient way possible.
+              </p>
+
+              <p className="text-lg">
+                Whether I'm working on a complex web application or a simple landing page, I approach each project 
+                with the same level of detail and dedication. 
+                My goal is always to deliver results and that not only meet, but exceed expectations of my clients.
+              </p>
+          </Container>
+        </section>
+
 
         <section className="grid grid-cols-[_27%_auto] gap-5 px-4 md:px-6 lg:px-12 xl:px-20 mt-3">
           <Container className="space-y-3 px-6 py-7">
@@ -172,7 +187,21 @@ export default async function Home() {
       </main>
 
       <footer className="px-4 md:px-6 lg:px-12 xl:px-20 font-jarkata mt-3">
-        <Container className="flex items-center justify-center py-20">
+        <Container className="flex items-center justify-center py-32 relative">
+          <Image 
+            className="top-0 left-0 absolute" 
+            src="/ellipse-left.svg" 
+            alt="Ellipse Left" 
+            width={150} height={150}
+          />
+
+          <Image 
+            className="bottom-0 right-0 absolute" 
+            src="/ellipse-right.svg" 
+            alt="Ellipse Left" 
+            width={150} height={150}
+          />
+
           <div className="text-center text-white w-1/2 space-y-10">
 
             <h2 className="font-bold text-5xl">
