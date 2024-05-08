@@ -180,7 +180,7 @@ export default async function Home() {
             </h2>
             <p className="text-lg text-[#b3b3b3]">
               Interested in working together or have a question? Feel free to reach out. 
-              I'm here to help you turn your ideas into amazing digital realities. 
+              I&apos;m here to help you turn your ideas into amazing digital realities. 
               Looking forward to hearing from you soon!
             </p>
 
