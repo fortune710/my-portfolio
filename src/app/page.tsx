@@ -8,9 +8,13 @@ import { VisualEditing } from "next-sanity";
 import { draftMode } from "next/headers";
 */
 
+import Blog from "@/components/blog";
+import Container from "@/components/container";
 import SkillsContainer from "@/components/skills/container";
+import { Button } from "@/components/ui/button";
 import { firestore } from "@/utils/firebase";
 import { collection, getDocs } from "firebase/firestore";
+import { ArrowRight, Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -142,11 +146,102 @@ export default async function Home() {
                   </div>
                 ))
               }
-
-
           </div>
         </section>
+
+
+        <section className="grid grid-cols-[_27%_auto] gap-5 px-4 md:px-6 lg:px-12 xl:px-20 mt-3">
+          <Container className="space-y-3 px-6 py-7">
+            <h2 className="text-primary font-semibold text-4xl">
+              Other things about me
+            </h2>
+            <p className="font-medium text-lg">
+              I talk about web dev a lot and my content is geared 
+              towards beginner developers. Here are some of my recent articles.
+            </p>
+
+            <Button className="bg-white text-black rounded-full w-16 h-16">
+              <ArrowRight/>
+            </Button>
+          </Container>
+
+          <Container>
+              <Blog/>
+          </Container>
+        </section>
       </main>
+
+      <footer className="px-4 md:px-6 lg:px-12 xl:px-20 font-jarkata mt-3">
+        <Container className="flex items-center justify-center py-20">
+          <div className="text-center text-white w-1/2 space-y-10">
+
+            <h2 className="font-bold text-5xl">
+              Let&apos;s Talk
+            </h2>
+            <p className="text-lg text-[#b3b3b3]">
+              Interested in working together or have a question? Feel free to reach out. 
+              I'm here to help you turn your ideas into amazing digital realities. 
+              Looking forward to hearing from you soon!
+            </p>
+
+            <div className="flex items-center justify-center gap-2">
+              <Link 
+                className="border border-[#3B3B3B] bg-[#0a0a0a] rounded-md p-2 flex items-center gap-2 w-fit"
+                href="mailto:fortunealebiosu710@gmail.com"
+                >
+                  <Image
+                    src="/logos/mail.svg"
+                    alt="My Email"
+                    width={24}
+                    height={24}
+                  />
+                  fortunealebiosu710@gmail.com
+              </Link>
+
+              <Link 
+                href="https://twitter.com/alebiosu_thedev"
+                target="_blank"
+                className="border border-[#3B3B3B] bg-[#0a0a0a] rounded-sm p-2 flex w-fit"
+              >
+                <Image
+                  src="/logos/twitter.svg"
+                  alt="My Twitter"
+                  width={24}
+                  height={24}
+                />
+              </Link>
+
+              <Link 
+                href="https://instagram.com/fortune_thedev"
+                target="_blank"
+                className="border border-[#3B3B3B] bg-[#0a0a0a] rounded-sm p-2 flex w-fit"
+              >
+                <Image
+                  src="/logos/instagram.svg"
+                  alt="My Instagram"
+                  width={24}
+                  height={24}
+                />
+              </Link>
+
+              <Link 
+                href="https://linkedin.com/in/fortunealebiosu"
+                target="_blank"
+                className="border border-[#3B3B3B] bg-[#0a0a0a] rounded-sm p-2 flex w-fit"
+              >
+                <Image
+                  src="/logos/linkedin.svg"
+                  alt="My LinkedIn"
+                  width={24}
+                  height={24}
+                />
+              </Link>
+
+
+            </div>
+          </div>
+        </Container>
+      </footer>
       
     </>
   );
