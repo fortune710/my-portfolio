@@ -68,6 +68,7 @@
 
 html {
   background: #030303;
+  scroll-behaviour: smooth;
 }
 
 .glass-back {
@@ -101,4 +102,20 @@ html {
 
 .underline-hover:hover::after {
   width: 100%;
+}
+
+.dark-mode input {
+  background:#030303
+}
+
+.custom-scroll::-webkit-scrollbar {
+  height: 4px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+
 }

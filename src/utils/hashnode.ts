@@ -1,7 +1,9 @@
+import { cache } from "react"
+
 const graphQLQuery = `
     query {
         me {
-            posts (pageSize: 6, page: 1) {
+            posts (pageSize: 10, page: 1) {
                 nodes {
                     id
                     title
@@ -17,13 +19,13 @@ const graphQLQuery = `
     }
 `
 
-export const getHashnodeArticles = async () => {
+export const getHashnodeArticles = cache(async () => {
     const response = await fetch("https://gql.hashnode.com", {
         body: JSON.stringify({
             query: graphQLQuery
         }),
         headers: {
-            "Authorization": "75002f18-80eb-4ec4-872e-8baabadcbdc1",
+            "Authorization": process.env.HASHNODE_ACCESS_TOKEN!,
             "Content-Type": "application/json"
         },
         method: "POST",
@@ -41,4 +43,4 @@ export const getHashnodeArticles = async () => {
         title: string,
     }[]
     return articles ?? []
-}
+})

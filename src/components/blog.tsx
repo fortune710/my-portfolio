@@ -5,10 +5,10 @@ export default async function Blog() {
     const articles = await getHashnodeArticles();
 
     return (
-        <div className="flex items-center pl-6 gap-4">
+        <div className="flex snap-x items-center pl-6 gap-4 overflow-x-auto w-full custom-scroll">
             {
-                articles.splice(0, 3).map((article) => (
-                    <div className="text-center max-w-[300px]" key={article.id}>
+                articles.slice(0, 4).map((article) => (
+                    <div className="text-center snap-start flex-shrink-0 max-w-[300px]" key={article.id}>
                         <Image
                             src={article.coverImage.url}
                             alt={article.title}

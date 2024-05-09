@@ -5,12 +5,14 @@ const skills = [
     {
         image: "/logos/react-svgrepo-com.svg",
         name: "React",
-        color: "bg-[#111111]"
+        color: "bg-[#111111] border border-white/30",
+        imageStyle: "max-sm:w-10 max-sm:h-10"
     },
     {
         image: "/logos/next-js-svgrepo-com.svg",
         name: "Next.js",
-        color: "bg-white"
+        color: "bg-white",
+        imageStyle: "max-sm:w-10 max-sm:h-10"
     },
     {
         image: "/logos/javascript-1-svgrepo-com.svg",
@@ -27,62 +29,74 @@ const skills = [
     {
         image: "/logos/python-svgrepo-com.svg",
         name: "Python",
-        color: "bg-white"
+        color: "bg-white",
+        imageStyle: "max-sm:w-10 max-sm:h-10"
     },
     {
         image: "/logos/node-js-svgrepo-com.svg",
         name: "Node.js",
-        color: "bg-zinc-500"
+        color: "bg-zinc-500 border border-white/30",
+        imageStyle: "max-sm:w-10 max-sm:h-10"
     },
     {
         image: "/logos/express-svgrepo-com.svg",
         name: "Express",
-        color: "bg-white"
+        color: "bg-white",
+        imageStyle: "max-sm:w-10 max-sm:h-10"
     },
     {
         image: "/logos/firebase-svgrepo-com.svg",
         name: "Firebase",
-        color: "bg-blue-300"
+        color: "bg-blue-300",
+        imageStyle: "max-sm:w-10 max-sm:h-10"
     },
     {
         image: "/logos/postgresql-svgrepo-com.svg",
         name: "PostgreSQL",
-        color: "bg-white"
+        color: "bg-white",
+        imageStyle: "max-sm:w-10 max-sm:h-10"
     },
     {
         image: "/logos/mysql-logo-svgrepo-com.svg",
         name: "MySQL",
-        color: "bg-white"
+        color: "bg-white",
+        imageStyle: "max-sm:w-10 max-sm:h-10"
     },
     {
         image: "/logos/light-prisma-svgrepo-com.svg",
         name: "Prisma",
-        color: "bg-white"
+        color: "bg-white",
+        imageStyle: "max-sm:w-10 max-sm:h-10"
     },
     {
         image: "/logos/aws-svgrepo-com.svg",
         name: "AWS",
-        color: "bg-white"
+        color: "bg-white",
+        imageStyle: "max-sm:w-10 max-sm:h-10"
     },
     {
         image: "/logos/tailwind-svgrepo-com.svg",
         name: "Tailwind",
-        color: "bg-white"
+        color: "bg-white",
+        imageStyle: "max-sm:w-10 max-sm:h-10"
     },
     {
         image: "/logos/react-svgrepo-com.svg",
         name: "React Native",
-        color: "bg-[#111111]"
+        color: "bg-[#111111] border border-white/30",
+        imageStyle: "max-sm:w-10 max-sm:h-10"
     },
     {
         image: "/logos/flask-svgrepo-com.svg",
         name: "Flask",
-        color: "bg-white"
+        color: "bg-white",
+        imageStyle: "max-sm:w-10 max-sm:h-10"
     },
     {
         image: "/logos/github-svgrepo-com.svg",
         name: "Github",
-        color: "bg-black"
+        color: "bg-black border border-white/30",
+        imageStyle: "max-sm:w-10 max-sm:h-10"
     },
 
 
@@ -92,7 +106,7 @@ const skills = [
 
 export default function SkillsContainer() {
     return (
-        <div  className="grid gap-12 grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7">
+        <div  className="grid gap-5 md:gap-12 grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7">
             <TooltipProvider>
                 {
                     skills.map((skill) => (
