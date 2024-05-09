@@ -306,7 +306,7 @@ export default async function Home() {
         </section>
       </main>
 
-      <footer className="px-4 md:px-6 lg:px-12 xl:px-20 font-jarkata mt-3 relative">
+      <footer className="pb-20 px-4 md:px-6 lg:px-12 xl:px-20 font-jarkata mt-3 relative">
         <Image 
           src="/glow.svg" 
           className="absolute -top-32 -left-[300px] -z-30 w-[400px] h-[380px] sm:w-[600px] sm:h-[500px]" 
