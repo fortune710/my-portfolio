@@ -110,12 +110,11 @@ export default async function Home() {
           <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[_2fr_1fr] gap-4">
             <div className="bg-dark border border-dark-muted rounded-[40px] px-8 py-7 max-sm:px-4 max-sm:py-4 mt-5">
               <p className="text-lg md:text-3xl md:leading-relaxed">
-                I&apos;m recent graduate from the Computer Science department at Nile University of Nigeria. 
-                My dev journey started back in 2020, when I had a huge interest for Mobile App Development, 
-                making me look for shortest route possible to being a Mobile App Developer😅. This opened my 
-                eyes to the power of web technologies and helping me to fully utilize the power of the web. 
-                Moving on to today, I&apos;ve gained lots of skills and had the privilege of building an awesome 
-                startup called Interna with some of my school colleagues.
+                As a fullstack software engineer with three years of experience, I&apos;ve mastered the art of weaving 
+                code into seamless digital experiences. From crafting visually stunning front-end designs to building 
+                robust back-end systems, I bring a harmonious blend of aesthetics and functionality to every project, 
+                and I am driven by a passion for innovation and excellence. My Degree in Computer Science has equipped me 
+                with the necessary tools and knowledge to develop a deep understanding of building quality systems. 
               </p>
             </div>
 
@@ -146,8 +145,30 @@ export default async function Home() {
             alt="Glow" 
             width={300} height={300}
           />
-
         </section>
+
+        <section className="px-4 md:px-6 lg:px-12 xl:px-20 mt-3 relative">
+          <Image 
+            src="/glow-2.svg" 
+            className="absolute -bottom-0 -right-[200px] -z-30 w-[600px] h-[580px] sm:w-[700px] sm:h-[600px]" 
+            alt="Glow" 
+            width={300} height={300}
+          />
+
+          <Container className="space-y-3 px-6 py-7">
+              <p className="text-lg">
+                Driven by a passion for innovation, I&apos;ve immersed myself in the dynamic world of startups. As a co-founder myself, 
+                I&apos;ve navigated the exhilarating highs and challenging lows of turning ideas into reality. 
+              </p>
+
+              <p className="text-lg">
+                This unique perspective has not only sharpened my technical abilities but also deepened my 
+                understanding of the business landscape. On a journey of transformation, one line of code at 
+                a time, I create the future through captivating software narratives.         
+              </p>
+          </Container>
+        </section>
+
 
         <section className="px-4 md:px-6 lg:px-12 xl:px-20 font-jarkata mt-10 relative">
           <h2 className="text-5xl max-sm:text-4xl font-bold text-primary">My Works</h2>
@@ -292,7 +313,7 @@ export default async function Home() {
             </p>
 
             <Link href="/blog">
-              <Button className="bg-white text-black rounded-full w-16 h-16 max-sm:mt-3">
+              <Button className="bg-white text-black rounded-full w-16 h-16 max-sm:mt-3 mt-5 hover:text-white">
                 <ArrowRight className="max-md:hidden"/>
                 <ArrowDown className="md:hidden"/>
               </Button>
