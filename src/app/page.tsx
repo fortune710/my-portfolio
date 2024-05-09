@@ -78,7 +78,7 @@ export default async function Home() {
       <main className="text-white overflow-x-hidden">
 
         <section className="px-4 md:px-6 lg:px-12 xl:px-20 font-jarkata mt-3 relative">
-          <div className="w-full glass-back rounded-[50px] h-screen border bg-white/5 border-white/60 flex items-center justify-center box-border p-36 max-md:p-16 max-sm:p-4 max-sm:h-[70dvh]">
+          <div className="w-full glass-back rounded-[50px] h-screen border bg-white/5 border-white/60 flex items-center justify-center box-border p-36 max-md:p-16 max-sm:p-4 max-sm:h-[80dvh]">
             <div className="space-y-4">
               <Image
                 className="mr-auto md:mx-auto max-sm:w-24 max-sm:h-24" 
@@ -108,8 +108,8 @@ export default async function Home() {
           <h2 className="font-bold text-3xl md:text-4xl lg:text-5xl text-primary">About Me</h2>
 
           <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[_2fr_1fr] gap-4">
-            <div className="bg-dark border border-dark-muted rounded-[40px] px-8 py-7 mt-5">
-              <p className="text-xl md:text-3xl md:leading-relaxed">
+            <div className="bg-dark border border-dark-muted rounded-[40px] px-8 py-7 max-sm:px-4 max-sm:py-4 mt-5">
+              <p className="text-lg md:text-3xl md:leading-relaxed">
                 I&apos;m recent graduate from the Computer Science department at Nile University of Nigeria. 
                 My dev journey started back in 2020, when I had a huge interest for Mobile App Development, 
                 making me look for shortest route possible to being a Mobile App Developer😅. This opened my 
@@ -171,7 +171,7 @@ export default async function Home() {
                       className="rounded-lg max-sm:w-[100px] max-sm:h-[100px]"
                     />
 
-                    <Link target="_blank"  className="border border-white rounded-md py-4 px-5 text-white font-medium" href={project.link}>
+                    <Link target="_blank"  className="border border-white rounded-md py-4 px-5 max-sm:py-2 max-sm:px-3 max-sm:text-xs text-white font-medium" href={project.link}>
                       Checkout Live App
                     </Link>
                   </div>
@@ -214,7 +214,7 @@ export default async function Home() {
                     className="rounded-lg"
                   />
 
-                  <Link target="_blank"  className="border border-white rounded-md py-4 px-5 text-white font-medium" href={project.link}>
+                  <Link target="_blank"  className="border border-white rounded-md py-4 px-5 max-sm:py-2 max-sm:px-3 max-sm:text-xs text-white font-medium" href={project.link}>
                     Checkout Live App
                   </Link>
                 </div>
@@ -245,7 +245,7 @@ export default async function Home() {
 
               <div className="flex items-center gap-5">
                 <Link href="/projects">
-                  <Button className="bg-white text-black rounded-full w-24 h-24 hover:text-white">
+                  <Button className="bg-white text-black rounded-full w-24 h-24 max-sm:w-16 max-sm:h-16 hover:text-white">
                     <ArrowRight className="h-12 w-12"/>
                   </Button>
                 </Link>
@@ -292,7 +292,7 @@ export default async function Home() {
             </p>
 
             <Link href="/blog">
-              <Button className="bg-white text-black rounded-full w-16 h-16">
+              <Button className="bg-white text-black rounded-full w-16 h-16 max-sm:mt-3">
                 <ArrowRight className="max-md:hidden"/>
                 <ArrowDown className="md:hidden"/>
               </Button>
@@ -340,9 +340,9 @@ export default async function Home() {
               Looking forward to hearing from you soon!
             </p>
 
-            <div className="flex flex-wrap items-center justify-center max-sm:justify-start gap-2">
+            <div className="flex max-sm:flex-col items-center justify-center max-sm:items-start gap-2">
               <Link 
-                className="border border-[#3B3B3B] bg-[#0a0a0a] rounded-md p-2 flex items-center gap-2 w-fit"
+                className="border border-[#3B3B3B] bg-[#0a0a0a] rounded-md p-2 flex items-center gap-2 w-fit max-sm:max-w-full"
                 href="mailto:fortunealebiosu710@gmail.com"
                 >
                   <Image
@@ -353,46 +353,48 @@ export default async function Home() {
                   />
                   fortunealebiosu710@gmail.com
               </Link>
-              <br className="md:hidden" />
-              <Link 
-                href="https://twitter.com/alebiosu_thedev"
-                target="_blank"
-                className="border border-[#3B3B3B] bg-[#0a0a0a] rounded-sm p-2 flex w-fit"
-              >
-                <Image
-                  src="/logos/twitter.svg"
-                  alt="My Twitter"
-                  width={24}
-                  height={24}
-                />
-              </Link>
+              <div className="flex items-center justify-start gap-2">
 
-              <Link 
-                href="https://instagram.com/fortune_thedev"
-                target="_blank"
-                className="border border-[#3B3B3B] bg-[#0a0a0a] rounded-sm p-2 flex w-fit"
-              >
-                <Image
-                  src="/logos/instagram.svg"
-                  alt="My Instagram"
-                  width={24}
-                  height={24}
-                />
-              </Link>
+                <Link 
+                  href="https://twitter.com/alebiosu_thedev"
+                  target="_blank"
+                  className="border border-[#3B3B3B] bg-[#0a0a0a] rounded-sm p-2 flex w-fit"
+                >
+                  <Image
+                    src="/logos/twitter.svg"
+                    alt="My Twitter"
+                    width={24}
+                    height={24}
+                  />
+                </Link>
 
-              <Link 
-                href="https://linkedin.com/in/fortunealebiosu"
-                target="_blank"
-                className="border border-[#3B3B3B] bg-[#0a0a0a] rounded-sm p-2 flex w-fit"
-              >
-                <Image
-                  src="/logos/linkedin.svg"
-                  alt="My LinkedIn"
-                  width={24}
-                  height={24}
-                />
-              </Link>
+                <Link 
+                  href="https://instagram.com/fortune_thedev"
+                  target="_blank"
+                  className="border border-[#3B3B3B] bg-[#0a0a0a] rounded-sm p-2 flex w-fit"
+                >
+                  <Image
+                    src="/logos/instagram.svg"
+                    alt="My Instagram"
+                    width={24}
+                    height={24}
+                  />
+                </Link>
 
+                <Link 
+                  href="https://linkedin.com/in/fortunealebiosu"
+                  target="_blank"
+                  className="border border-[#3B3B3B] bg-[#0a0a0a] rounded-sm p-2 flex w-fit"
+                >
+                  <Image
+                    src="/logos/linkedin.svg"
+                    alt="My LinkedIn"
+                    width={24}
+                    height={24}
+                  />
+                </Link>
+
+              </div>
 
             </div>
           </div>
