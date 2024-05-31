@@ -1,0 +1,10 @@
+.gradient {
+    height: 100%;
+    width: 3px;
+    margin: 0 auto;
+}
+
+.section {
+    display: grid;
+    grid-template-columns: calc(100%/12) calc(100%*(11/12));
+}
