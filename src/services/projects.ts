@@ -5,7 +5,7 @@ import { cache } from "react";
 
 const projectCollections = collection(firestore, "projects")
 
-interface Project {
+export interface Project {
     id: string;
     title: string;
     description: string;
@@ -23,3 +23,9 @@ export const getProjects = cache(async () => {
     const projects = (await getDocs(projectCollections)).docs.map((doc) => ({ id: doc.id, ...doc.data() }));
     return projects as Project[];
 })
+
+export const getProjectDetails = async (id: string) => {
+    const projects = await getProjects();
+    const project = projects?.find((project) => project.id === id);
+    return project;
+}
