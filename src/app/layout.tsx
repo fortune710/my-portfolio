@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
-
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
   title: "fortunethedev",
@@ -36,6 +36,7 @@ export default function RootLayout({
         {children}
 
         <Toaster/>
+        <GoogleAnalytics gaId="G-BZ5CJ8DH33"/>
       </body>
     </html>
   );
