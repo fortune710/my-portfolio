@@ -14,7 +14,7 @@ export default async function ProjectsPage() {
 
             <div className="animate-fade-in-bottom grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-3 md:px-10 lg:px-16 gap-5 pt-3 md:pt-4 gap-y-5 md:gap-y-7">
                 {
-                    projects.map((project) => <ProjectCardNew project={project}/>)
+                    projects.map((project) => <ProjectCardNew key={project.id} project={project}/>)
                 }
             </div>
         </main>
