@@ -86,7 +86,7 @@ export default async function Home() {
                 alt="Fortune" 
                 width={200} height={200}
               />
-              <h1 className="text-primary font-bold text-7xl max-sm:text-4xl max-md:text-5xl text-left md:text-center">Hi 👋, I&apos;m Fortune Alebiosu</h1>
+              <h1 className="text-primary animate-tracking-in-expand font-bold text-7xl max-sm:text-4xl max-md:text-5xl text-left md:text-center">Hi 👋, I&apos;m Fortune Alebiosu</h1>
               <p className="font-normal text-4xl max-sm:text-xl max-md:text-3xl text-left md:text-center">
                 I&apos;m an amazing full-stack developer passionate about building scalable digital experiences. 
                 My aim is to blend functionality and aesthetics to create impactful solutions
@@ -104,7 +104,7 @@ export default async function Home() {
         </section>
 
 
-        <section id="about" className="px-4 md:px-6 lg:px-12 xl:px-20 font-jarkata mt-6 sm:mt-10">
+        <section id="about" className="px-4 md:px-6 lg:px-12 xl:px-20 font-jarkata mt-6 sm:mt-10 md:mt-16 animate-fade-in-bottom">
           <h2 className="font-bold text-3xl md:text-4xl lg:text-5xl text-primary">About Me</h2>
 
           <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[_2fr_1fr] gap-4">
