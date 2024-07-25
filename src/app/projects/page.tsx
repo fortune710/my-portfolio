@@ -11,7 +11,7 @@ export default async function ProjectsPage() {
                 <h1 className="font-bold font-inter text-4xl lg:text-5xl">My Projects</h1>
                 <p className="font-medium font-jarkata text-lg lg:text-2xl">
                     This page showcases a collection of my full-stack software engineering projects. 
-                    Explore web and mobile applications I've built from the ground up, as well as innovative solutions 
+                    Explore web and mobile applications I&apos;ve built from the ground up, as well as innovative solutions 
                     powered by AI. Each project is a testament to my passion for crafting exceptional digital experiences. 
                 </p>
             </section>
