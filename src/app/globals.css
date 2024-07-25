@@ -110,12 +110,15 @@ html {
 
 .custom-scroll::-webkit-scrollbar {
   height: 4px;
+  width: 4px;
 }
 
 .custom-scroll::-webkit-scrollbar-track {
-  background: transparent;
+  @apply bg-zinc-500/30 rounded-sm;
+  border-left: 5px solid transparent;
 }
 
 .custom-scroll::-webkit-scrollbar-thumb {
-
+  @apply bg-slate-500 rounded-sm;
+  border-left: 5px solid transparent;
 }
