@@ -17,6 +17,8 @@ export interface Project {
     type: string;
     year: string;
     featured?: boolean;
+    in_development?: boolean;
+    case_study?: string;
 }
 
 export const getProjects = cache(async () => {
