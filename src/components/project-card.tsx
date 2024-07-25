@@ -64,7 +64,7 @@ export const ProjectCardNew = ({ project }: { project: Project }) => {
                 </div>
             </AlertDialogTrigger>
 
-            <AlertDialogContent className="bg-[#030303] border-zinc-700 text-white w-full md:w-1/2 lg:w-1/3">
+            <AlertDialogContent className="bg-[#030303] border-zinc-700 text-white max-md:rounded-lg w-[94%] md:w-1/2 lg:w-1/3">
                 <AlertDialogHeader>
                     <AlertDialogTitle>{project.title}</AlertDialogTitle>
                     <AlertDialogDescription>
@@ -81,6 +81,14 @@ export const ProjectCardNew = ({ project }: { project: Project }) => {
                         height={400}
                         className="rounded-lg w-full"
                     />
+
+                    {
+                        !project.case_study ? null:
+                        <div>
+                            <h3 className="font-semibold text-lg">Case Study</h3>
+                            <p className="mt-1">{project.case_study}</p>
+                        </div>
+                    }
 
                     <div>
                         <h3 className="font-semibold text-lg">Skills</h3>
