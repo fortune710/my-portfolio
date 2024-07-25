@@ -63,6 +63,12 @@ export default function CreateProjectDialog({ children }: {
                             <Label>Description</Label>
                             <Textarea name="description"/>
                         </div>
+
+                        <div>
+                            <Label>Case Study</Label>
+                            <Textarea name="case_study"/>
+                        </div>
+
                         <div>
                             <Label>Skills</Label>
                             <Textarea name="skills"/>
@@ -111,6 +117,11 @@ export default function CreateProjectDialog({ children }: {
                         <div className="flex items-center gap-2">
                             <Input className="w-4 h-4" type="checkbox" name="featured"/>
                             <Label>Featured Project</Label>
+                        </div>
+
+                        <div className="flex items-center gap-2">
+                            <Input className="w-4 h-4" type="checkbox" name="in_development"/>
+                            <Label>In Development</Label>
                         </div>
                     </div>
 
