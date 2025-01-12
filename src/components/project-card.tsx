@@ -42,7 +42,7 @@ export const ProjectCardNew = ({ project }: { project: Project }) => {
     return (
         <AlertDialog>
             <AlertDialogTrigger asChild>
-                <div>
+                <div className="cursor-custom">
                     <Image
                         src={project.image}
                         alt={project.title}

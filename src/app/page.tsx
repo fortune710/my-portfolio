@@ -199,7 +199,7 @@ export default async function Home() {
 
                   <p className="lg:text-base text-[#B3B3B3]">
                     {project.description.substring(0, 205) + "..."}{" "}
-                    <Link href={`/projects/${project.id}`}>
+                    <Link href={`/projects`}>
                       <span className="underline">See More</span>
                     </Link>
                   </p>
@@ -268,8 +268,8 @@ export default async function Home() {
 
               <div className="flex items-center gap-5 mt-4">
                 <Link href="/projects">
-                  <Button className="bg-white text-black rounded-full w-20 h-20 max-sm:w-16 max-sm:h-16 hover:text-white">
-                    <ArrowRight className="h-12 w-12"/>
+                  <Button className="bg-white text-black rounded-full w-16 h-16 max-sm:w-16 max-sm:h-16 hover:text-white cursor-custom">
+                    <ArrowRight />
                   </Button>
                 </Link>
                 <h2 className="font-bold text-xl md:text-3xl lg:text-4xl">See More</h2>
@@ -317,7 +317,7 @@ export default async function Home() {
               </p>
 
               <Link href="/blog">
-                <Button className="bg-white text-black rounded-full w-16 h-16 max-sm:mt-3 mt-5 hover:text-white">
+                <Button className="bg-white text-black rounded-full w-16 h-16 max-sm:mt-3 mt-5 hover:text-white cursor-custom">
                   <ArrowRight className="max-md:hidden"/>
                   <ArrowDown className="md:hidden"/>
                 </Button>
