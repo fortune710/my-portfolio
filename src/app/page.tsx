@@ -18,7 +18,7 @@ export default async function Home() {
 
 
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Image src="/glow-1.svg" className="absolute top-0 left-0" alt="Glow" width={300} height={300}/>
       <header className="w-full px-4 md:px-6 lg:px-12 xl:px-20 h-28 flex items-center">
         <div className="flex items-center justify-between sm:justify-center text-white w-full relative">
@@ -66,7 +66,7 @@ export default async function Home() {
         
       </header>
 
-      <main className="text-white overflow-x-hidden">
+      <main className="text-white">
 
         <section className="px-4 md:px-6 lg:px-12 xl:px-20 font-jarkata mt-3 relative">
           <div className="w-full glass-back rounded-[50px] h-screen border bg-white/5 border-white/60 flex items-center justify-center box-border p-36 max-md:p-16 max-sm:p-4 max-sm:h-[80dvh]">
@@ -79,8 +79,8 @@ export default async function Home() {
               />
               <h1 className="text-primary animate-tracking-in-expand font-bold text-7xl max-sm:text-4xl max-md:text-5xl text-left md:text-center">Hi 👋, I&apos;m Fortune Alebiosu</h1>
               <p className="font-normal text-4xl max-sm:text-xl max-md:text-3xl text-left md:text-center">
-                I&apos;m an amazing full-stack developer passionate about building scalable digital experiences. 
-                My aim is to blend functionality and aesthetics to create impactful solutions
+                I&apos;m a highly skilled fullstack engineer driven by a passion for creating innovative digital experiences.
+                I seamlessly merge functionality with aesthetics, delivering impactful and user-focused solutions.
               </p>
             </div>
           </div>
@@ -95,7 +95,7 @@ export default async function Home() {
         </section>
 
 
-        <section id="about" className="px-4 md:px-6 lg:px-12 xl:px-20 font-jarkata mt-6 sm:mt-10 md:mt-16 animate-fade-in-bottom">
+        <section id="about" className="px-4 md:px-6 lg:px-12 xl:px-20 font-jarkata mt-24 max-md:mt-16 animate-fade-in-bottom">
           <ScrollAnimation>
             <h2 className="font-bold text-3xl md:text-4xl lg:text-5xl text-primary">About Me</h2>
           </ScrollAnimation>
@@ -158,14 +158,14 @@ export default async function Home() {
 
               <p className="text-lg md:text-2xl md:leading-relaxed">
                 This unique perspective has not only sharpened my technical abilities but also deepened my 
-                understanding of the business landscape. On a journey of transformation, one line of code at 
-                a time, I create the future through captivating software narratives.         
+                understanding of the business landscape. By merging technical proficiency with business insight, I develop solutions{" "} 
+                that not only perform seamlessly but also propel business success.
               </p>
           </Container>
         </section>
 
 
-        <section className="px-4 md:px-6 lg:px-12 xl:px-20 font-jarkata mt-10 relative">
+        <section className="px-4 md:px-6 lg:px-12 xl:px-20 font-jarkata mt-24 max-md:mt-16 relative">
           <ScrollAnimation>
             <h2 className="text-5xl max-sm:text-4xl font-bold text-primary">My Works</h2>
           </ScrollAnimation>
@@ -305,16 +305,8 @@ export default async function Home() {
           </ScrollAnimation>
         </section>
 
-        <section className="my-24 max-md:my-16 space-y-4 lg:space-y-7">
-          <h2 className="font-bold text-primary text-2xl md:text-3xl lg:text-4xl text-center">
-            Mad Over Music
-          </h2>
-          <MusicContainer/>
-        </section>
-
-
         <ScrollAnimation>
-          <section className="grid grid-cols-1 md:grid-cols-[_27%_auto] gap-5 px-4 md:px-6 lg:px-12 xl:px-20 mt-3">
+          <section className="grid grid-cols-1 md:grid-cols-[_27%_auto] gap-5 px-4 md:px-6 lg:px-12 xl:px-20 mt-5 max-md:mt-3">
             <Container className="space-y-3 px-6 py-7">
               <h2 className="text-primary font-semibold text-4xl">
                 Other things about me
@@ -338,6 +330,13 @@ export default async function Home() {
             </Container>
           </section>
         </ScrollAnimation>
+
+        <section className="my-24 max-md:my-16 space-y-4 lg:space-y-7">
+          <h2 className="font-bold text-primary text-2xl md:text-3xl lg:text-4xl text-center">
+            Mad Over Music
+          </h2>
+          <MusicContainer/>
+        </section>
       </main>
 
       <footer className="pb-20 px-4 md:px-6 lg:px-12 xl:px-20 font-jarkata mt-3 relative">
@@ -435,6 +434,6 @@ export default async function Home() {
         </Container>
       </footer>
       
-    </>
+    </div>
   );
 }
