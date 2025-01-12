@@ -189,7 +189,7 @@ export default async function Home() {
                       className="rounded-lg max-sm:w-[100px] max-sm:h-[100px]"
                     />
 
-                    <Link target="_blank"  className="border border-white rounded-md py-4 px-5 max-sm:py-2 max-sm:px-3 max-sm:text-xs text-white font-semibold cursor-custom" href={project.link}>
+                    <Link target="_blank"  className="border border-white rounded-md py-2 px-3 text-sm max-sm:py-2 max-sm:px-3 max-sm:text-xs text-white font-semibold cursor-custom" href={project.link}>
                       Checkout Live App
                     </Link>
                   </div>
@@ -237,7 +237,7 @@ export default async function Home() {
                     className="rounded-lg"
                   />
 
-                  <Link target="_blank"  className="border border-white rounded-md py-4 px-5 max-sm:py-2 max-sm:px-3 max-sm:text-xs text-white font-medium" href={project.link}>
+                  <Link target="_blank"  className="border border-white rounded-md py-2 px-3 cursor-custom text-sm max-sm:py-2 max-sm:px-3 max-sm:text-xs text-white font-medium" href={project.link}>
                     Checkout Live App
                   </Link>
                 </div>
