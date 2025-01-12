@@ -1,9 +1,7 @@
-'use server'
-
+import { refreshClient } from "@/utils/client-refresh";
 import { firestore, storage } from "@/utils/firebase";
 import { addDoc, collection, setDoc } from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
-import { revalidatePath } from "next/cache";
 
 
 function generateRandomSequence(): string {
@@ -67,8 +65,8 @@ export default async function createProject(formData: FormData) {
             type,
             featured: !!featured
         })  
-        revalidatePath("/admin")
-        revalidatePath("/")
+        refreshClient("/admin")
+        refreshClient("/")
         
          
     } catch (err: any) {
