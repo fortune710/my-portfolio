@@ -122,3 +122,7 @@ html {
   @apply bg-slate-500 rounded-sm;
   border-left: 5px solid transparent;
 }
+
+.cursor-custom {
+  cursor: url('../../public/arrowhead-rounded-outline.svg'), auto;
+}

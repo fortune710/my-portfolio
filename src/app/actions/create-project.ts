@@ -1,16 +1,10 @@
 'use server'
 
 import { firestore, storage } from "@/utils/firebase";
-import { kv, createClient } from "@vercel/kv";
 import { addDoc, collection, setDoc } from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { revalidatePath } from "next/cache";
 
-const projects = createClient({
-    url: process.env.KV_REST_API_URL!,
-    token: process.env.KV_REST_API_TOKEN!,
-    enableTelemetry: true
-})
 
 function generateRandomSequence(): string {
     return Math.random().toString(36).substr(2, 10);
@@ -77,8 +71,9 @@ export default async function createProject(formData: FormData) {
         revalidatePath("/")
         
          
-    } catch {
-        throw Error('An error occurred')
+    } catch (err: any) {
+        console.log(err)
+        throw Error('An error occured')
     }
 
 }

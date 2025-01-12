@@ -26,7 +26,7 @@ export default function CreateProjectDialog({ children }: {
                 title: "Sucess",
                 description: "Created Project Successfully",
             });
-        } catch {
+        } catch (err) {
             toast({
                 title: "Error",
                 description: "Problem while creating project",

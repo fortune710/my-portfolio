@@ -14,6 +14,10 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'cdn.hashnode.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.scdn.co'
       }
     ],
   },
