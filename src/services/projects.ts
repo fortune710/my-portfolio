@@ -1,6 +1,6 @@
 import { collection, getDocs } from "firebase/firestore";
 import { firestore } from "@/utils/firebase";
-//import { cache } from "react";
+import { cache } from "react";
 
 
 const projectCollections = collection(firestore, "projects")
@@ -21,10 +21,10 @@ export interface Project {
     case_study?: string;
 }
 
-export const getProjects = async () => {
+export const getProjects = cache(async () => {
     const projects = (await getDocs(projectCollections)).docs.map((doc) => ({ id: doc.id, ...doc.data() }));
     return projects as Project[];
-}
+})
 
 export const getProjectDetails = async (id: string) => {
     const projects = await getProjects();
