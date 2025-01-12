@@ -1,0 +1,74 @@
+
+
+.glass {
+    @apply backdrop-blur-sm bg-white/20 w-full shadow-sm;
+}
+
+.project-title {
+    @apply group-hover:text-primary;
+}
+
+.project-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+    margin: 10px 0;
+    font-size: 14px;
+    color: #fbfbfb;
+}
+
+.project-info :is(h3, p){
+    margin: 5px 0;
+}
+
+.project-tag {
+    @apply px-1 py-2 rounded-lg;
+}
+
+.projectTech {
+    display: flex;
+    gap: 0.5em;
+    margin: 5px 0;
+}
+
+
+.projects {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 20px auto;
+}
+
+.seeAll {
+    background-color: var(--green);
+    color: #fff;
+    margin: 0 auto;
+    height: 50px;
+    padding: 0 50px;
+    border: 0;
+    border-radius: 5px;
+}
+
+
+
+@media screen and (max-width: 450px){
+    .projects {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
